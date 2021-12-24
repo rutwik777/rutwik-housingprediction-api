@@ -1,5 +1,4 @@
 import numpy as np
-import locale
 from flask import Flask, request, jsonify, render_template
 import pickle
 
@@ -22,8 +21,9 @@ def predict():
 
     output = np.round(prediction, 0)
     output = int(output)
-
-    return render_template('index.html', prediction_text='House price should be {}'.format((locale.currency(output, grouping=True))))
+    output = "${:,.2f}".format(output)
+    
+    return render_template('index.html', prediction_text='House price should be {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
