@@ -11,23 +11,36 @@
   
 </head>
 
-<body>
+<body style="background-color:white;">
  <div class="login">
-	<h1 style="text-align: center;" >Predict Housing Price Analysis</h1>
+	<h1 style="text-align: center;" >Predict Housing Price using Machine Learning Analysis</h1>
   <p style="text-align:center;"><img src="https://assets.weforum.org/article/image/large_15gAQdddPzO5Cn18bJ--4zQTUHrfpVxWQbAQ6jhvTSc.jpg"></p>
      <!-- Main Input For Receiving Query to our ML -->
     <form style="text-align: center;" action="{{ url_for('predict')}}"method="post">
-    	<input style="text-align: center; width:280px;" type="text" name="Rooms" placeholder="Enter number of Rooms to predict house price" required="required" />
+    	<input style="text-align: center; height:25px ; width:280px;" type="text" name="Rooms" placeholder="Enter number of Rooms to predict house price" required="required" />
       <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" /> -->
     <!--<input type="text" name="interview_score" placeholder="Interview Score" required="required" />-->
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button style="height: 30px;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
    <br>
    <h3 style="text-align: center;">{{ prediction_text }}</h3>
-
+   <h3 style="text-align: center;">
+     Created with &#10084; by Rutwik Patil
+   </h3>
+   <p style="text-align: center;">
+    Check out my LinkedIn and Github below
+   </p>
+   <p style="text-align: center;"><a target="_blank" href="https://www.linkedin.com/in/rutwik-patil-0195b910b">
+    <img style="text-align: center; width: 70px; height: 70px;" src="linkedin.png" style="float:left">
+   </a>
+  </p>
+   <p style="text-align: center;"><a target="_blank" href="https://github.com/rutwik777">
+    <img style="text-align: center; width: 50px; height: 50px;" src="github.png">
+   </a>
+  </p>
  </div>
 
 
